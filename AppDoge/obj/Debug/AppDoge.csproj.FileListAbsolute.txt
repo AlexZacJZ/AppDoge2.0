@@ -1,0 +1,16 @@
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\bin\Debug\AppDoge.exe.config
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\bin\Debug\AppDoge.exe
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\bin\Debug\AppDoge.pdb
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\bin\Debug\UtileriaDLL.dll
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\bin\Debug\UtileriaDLL.pdb
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.csproj.AssemblyReference.cache
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.FormLogin.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Properties.Resources.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.csproj.GenerateResource.cache
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.csproj.CoreCompileInputs.cache
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.csproj.CopyComplete
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.exe
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.pdb
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.FormBase.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.VentanaAdmin.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.VentanaUsuario.resources

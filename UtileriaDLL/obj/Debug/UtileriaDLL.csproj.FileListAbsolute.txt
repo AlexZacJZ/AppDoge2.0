@@ -1,0 +1,6 @@
+C:\Users\DELL-PC\source\repos\AppDoge\UtileriaDLL\bin\Debug\UtileriaDLL.dll
+C:\Users\DELL-PC\source\repos\AppDoge\UtileriaDLL\bin\Debug\UtileriaDLL.pdb
+C:\Users\DELL-PC\source\repos\AppDoge\UtileriaDLL\obj\Debug\UtileriaDLL.csproj.AssemblyReference.cache
+C:\Users\DELL-PC\source\repos\AppDoge\UtileriaDLL\obj\Debug\UtileriaDLL.csproj.CoreCompileInputs.cache
+C:\Users\DELL-PC\source\repos\AppDoge\UtileriaDLL\obj\Debug\UtileriaDLL.dll
+C:\Users\DELL-PC\source\repos\AppDoge\UtileriaDLL\obj\Debug\UtileriaDLL.pdb
