@@ -42,6 +42,11 @@ namespace AppDoge
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnExitFormBase
+            // 
+            this.btnExitFormBase.Location = new System.Drawing.Point(375, 207);
+            this.btnExitFormBase.Size = new System.Drawing.Size(114, 33);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(68, 148);
@@ -156,6 +161,17 @@ namespace AppDoge
             this.Text = "VentanaAdmin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaAdmin_FormClosed);
             this.Load += new System.EventHandler(this.VentanaAdmin_Load);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.lblNombre, 0);
+            this.Controls.SetChildIndex(this.lblCuenta, 0);
+            this.Controls.SetChildIndex(this.lblCodigo, 0);
+            this.Controls.SetChildIndex(this.btnContenedor, 0);
+            this.Controls.SetChildIndex(this.btnAdministra, 0);
+            this.Controls.SetChildIndex(this.btnCambiaPass, 0);
+            this.Controls.SetChildIndex(this.btnExitFormBase, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

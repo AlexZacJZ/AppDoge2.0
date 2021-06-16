@@ -42,6 +42,11 @@ namespace AppDoge
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnExitFormBase
+            // 
+            this.btnExitFormBase.Location = new System.Drawing.Point(369, 213);
+            this.btnExitFormBase.Size = new System.Drawing.Size(114, 31);
+            // 
             // btnCambiaPass
             // 
             this.btnCambiaPass.Font = new System.Drawing.Font("Maiandra GD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,6 +160,17 @@ namespace AppDoge
             this.Text = "VentanaUsuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaUsuario_FormClosed);
             this.Load += new System.EventHandler(this.VentanaUsuario_Load);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.lblNombre, 0);
+            this.Controls.SetChildIndex(this.lblCuenta, 0);
+            this.Controls.SetChildIndex(this.lblCodigo, 0);
+            this.Controls.SetChildIndex(this.btnContenedor, 0);
+            this.Controls.SetChildIndex(this.btnAdministra, 0);
+            this.Controls.SetChildIndex(this.btnCambiaPass, 0);
+            this.Controls.SetChildIndex(this.btnExitFormBase, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

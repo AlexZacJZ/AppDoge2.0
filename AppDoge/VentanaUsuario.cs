@@ -11,7 +11,7 @@ using UtileriaDLL;
 
 namespace AppDoge
 {
-    public partial class VentanaUsuario : Form
+    public partial class VentanaUsuario : FormBase
     {
         public VentanaUsuario()
         {

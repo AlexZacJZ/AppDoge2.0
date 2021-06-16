@@ -40,6 +40,7 @@ namespace AppDoge
             this.btnExitFormBase.TabIndex = 0;
             this.btnExitFormBase.Text = "Salida";
             this.btnExitFormBase.UseVisualStyleBackColor = true;
+            this.btnExitFormBase.Click += new System.EventHandler(this.btnExitFormBase_Click);
             // 
             // FormBase
             // 
@@ -55,6 +56,6 @@ namespace AppDoge
 
         #endregion
 
-        private System.Windows.Forms.Button btnExitFormBase;
+        public System.Windows.Forms.Button btnExitFormBase;
     }
 }
