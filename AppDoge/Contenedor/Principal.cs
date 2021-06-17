@@ -123,8 +123,8 @@ namespace AppDoge
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MantenimientoProducto manPro = new MantenimientoProducto();
-            manClin.MdiParent = this;
-            manClin.Show();
+            manPro.MdiParent = this;
+            manPro.Show();
         }
     }
 }
