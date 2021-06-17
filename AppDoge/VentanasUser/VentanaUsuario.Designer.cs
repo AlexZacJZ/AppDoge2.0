@@ -76,6 +76,7 @@ namespace AppDoge
             this.btnContenedor.TabIndex = 17;
             this.btnContenedor.Text = "Contenedor Principal";
             this.btnContenedor.UseVisualStyleBackColor = true;
+            this.btnContenedor.Click += new System.EventHandler(this.btnContenedor_Click);
             // 
             // lblCodigo
             // 

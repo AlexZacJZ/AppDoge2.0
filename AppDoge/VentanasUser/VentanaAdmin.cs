@@ -11,14 +11,14 @@ using UtileriaDLL;
 
 namespace AppDoge
 {
-    public partial class VentanaUsuario : FormBase
+    public partial class VentanaAdmin : FormBase
     {
-        public VentanaUsuario()
+        public VentanaAdmin()
         {
             InitializeComponent();
         }
 
-        private void VentanaUsuario_Load(object sender, EventArgs e)
+        private void VentanaAdmin_Load(object sender, EventArgs e)
         {
             //Cmd creara una consulta a la base de datos con la informacion de LoginForm.Codigo
             string cmd = "Select * From Usuarios Where id_user=" + FormLogin.codigo;
@@ -31,9 +31,21 @@ namespace AppDoge
             pictureBox1.Image = Image.FromFile(url);
         }
 
-        private void VentanaUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VentanaAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnContenedor_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            this.Hide();
+            principal.Show();
         }
     }
 }

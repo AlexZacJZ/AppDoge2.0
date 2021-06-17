@@ -120,6 +120,7 @@ namespace AppDoge
             this.btnContenedor.TabIndex = 7;
             this.btnContenedor.Text = "Contenedor Principal";
             this.btnContenedor.UseVisualStyleBackColor = true;
+            this.btnContenedor.Click += new System.EventHandler(this.btnContenedor_Click);
             // 
             // btnAdministra
             // 

@@ -14,3 +14,9 @@ C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.pdb
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.FormBase.resources
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.VentanaAdmin.resources
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.VentanaUsuario.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Consultas.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Mantenimiento.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Principal.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Procesos.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.MantenimientoCliente.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.MantenimientoProducto.resources
