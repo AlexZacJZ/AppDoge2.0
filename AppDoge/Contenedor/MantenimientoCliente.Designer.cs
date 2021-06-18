@@ -32,13 +32,14 @@ namespace AppDoge
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtNit = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtTelefono = new UtileriaDLL.ControlTxt();
+            this.txtNit = new UtileriaDLL.ControlTxt();
+            this.txtApellido = new UtileriaDLL.ControlTxt();
+            this.txtNombre = new UtileriaDLL.ControlTxt();
+            this.txtId = new UtileriaDLL.ControlTxt();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -68,41 +69,6 @@ namespace AppDoge
             this.label1.TabIndex = 14;
             this.label1.Text = "Código";
             // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(124, 97);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(146, 20);
-            this.txtApellido.TabIndex = 13;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(124, 68);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(146, 20);
-            this.txtNombre.TabIndex = 12;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(124, 37);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(146, 20);
-            this.txtId.TabIndex = 11;
-            // 
-            // txtNit
-            // 
-            this.txtNit.Location = new System.Drawing.Point(124, 133);
-            this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(146, 20);
-            this.txtNit.TabIndex = 17;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(124, 166);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(146, 20);
-            this.txtTelefono.TabIndex = 18;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -121,38 +87,85 @@ namespace AppDoge
             this.label5.TabIndex = 20;
             this.label5.Text = "Telefono";
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(124, 163);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(146, 20);
+            this.txtTelefono.SoloNumeros = true;
+            this.txtTelefono.TabIndex = 25;
+            this.txtTelefono.Validar = true;
+            // 
+            // txtNit
+            // 
+            this.txtNit.Location = new System.Drawing.Point(124, 133);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(146, 20);
+            this.txtNit.SoloNumeros = true;
+            this.txtNit.TabIndex = 24;
+            this.txtNit.Validar = true;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(124, 97);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(146, 20);
+            this.txtApellido.SoloNumeros = false;
+            this.txtApellido.TabIndex = 23;
+            this.txtApellido.Validar = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(124, 68);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(146, 20);
+            this.txtNombre.SoloNumeros = false;
+            this.txtNombre.TabIndex = 22;
+            this.txtNombre.Validar = true;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(124, 36);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(146, 20);
+            this.txtId.SoloNumeros = true;
+            this.txtId.TabIndex = 21;
+            this.txtId.Validar = true;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
             // MantenimientoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 244);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtNit);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "MantenimientoCliente";
             this.Text = "MantenimientoCliente";
-            this.Controls.SetChildIndex(this.txtId, 0);
-            this.Controls.SetChildIndex(this.txtNombre, 0);
-            this.Controls.SetChildIndex(this.txtApellido, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.txtNit, 0);
-            this.Controls.SetChildIndex(this.txtTelefono, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtId, 0);
             this.Controls.SetChildIndex(this.btnExitFormBase, 0);
             this.Controls.SetChildIndex(this.btnConsultar, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.Controls.SetChildIndex(this.btnNuevo, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtNombre, 0);
+            this.Controls.SetChildIndex(this.txtApellido, 0);
+            this.Controls.SetChildIndex(this.txtNit, 0);
+            this.Controls.SetChildIndex(this.txtTelefono, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,12 +176,12 @@ namespace AppDoge
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtNit;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private UtileriaDLL.ControlTxt txtId;
+        private UtileriaDLL.ControlTxt txtNombre;
+        private UtileriaDLL.ControlTxt txtApellido;
+        private UtileriaDLL.ControlTxt txtNit;
+        private UtileriaDLL.ControlTxt txtTelefono;
     }
 }

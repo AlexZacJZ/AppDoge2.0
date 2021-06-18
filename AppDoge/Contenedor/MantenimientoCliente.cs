@@ -20,17 +20,27 @@ namespace AppDoge
 
         public override bool Guardar()
         {
-            try
+            /*Lo que hace el if con el nuevo procedimiento de ValidarFormulario es, Si no encuentra ningun error 
+             procedera a almacenar la informacion en la base de datos, recordando que el unico error que 
+            estamos validando es que si el Txt se encuentra nulo/Vacio*/
+            if (MiLibreria.ValidarFormulario(this, errorProvider1) == false)
             {
-                string cdm = string.Format("Exec ActualizaCliente '{0}','{1}','{2}','{3}','{4}'", txtId.Text.Trim(), 
-                    txtNombre.Text.Trim(),txtApellido.Text.Trim(),txtNit.Text.Trim(),txtTelefono.Text.Trim());
-                MiLibreria.Ejecutar(cdm);
-                MessageBox.Show("Se ha guardado correctamente");
-                return true;
+                try
+                {
+                    string cdm = string.Format("Exec ActualizaCliente '{0}','{1}','{2}','{3}','{4}'", txtId.Text.Trim(),
+                        txtNombre.Text.Trim(), txtApellido.Text.Trim(), txtNit.Text.Trim(), txtTelefono.Text.Trim());
+                    MiLibreria.Ejecutar(cdm);
+                    MessageBox.Show("Se ha guardado correctamente");
+                    return true;
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + exp.Message);
+                    return false;
+                }
             }
-            catch (Exception exp)
+            else
             {
-                MessageBox.Show("Ha ocurrido un error: " + exp.Message);
                 return false;
             }
         }
@@ -46,6 +56,11 @@ namespace AppDoge
             {
                 MessageBox.Show("Ha ocurrido un error" + exp.Message);
             }
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }
 }
