@@ -49,6 +49,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contenedor\ConsultarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contenedor\ConsultarClientes.Designer.cs">
+      <DependentUpon>ConsultarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contenedor\ConsultarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contenedor\ConsultarProductos.Designer.cs">
+      <DependentUpon>ConsultarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contenedor\Consultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     </Compile>
     <Compile Include="Contenedor\MantenimientoProducto.Designer.cs">
       <DependentUpon>MantenimientoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contenedor\Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contenedor\Facturacion.Designer.cs">
+      <DependentUpon>Facturacion.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasUser\Form1.cs">
       <SubType>Form</SubType>
@@ -111,8 +129,17 @@
     <Compile Include="VentanasUser\VentanaUsuario.Designer.cs">
       <DependentUpon>VentanaUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Contenedor\ConsultarClientes.resx">
+      <DependentUpon>ConsultarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contenedor\ConsultarProductos.resx">
+      <DependentUpon>ConsultarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contenedor\Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contenedor\Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contenedor\MantenimientoCliente.resx">
       <DependentUpon>MantenimientoCliente.cs</DependentUpon>

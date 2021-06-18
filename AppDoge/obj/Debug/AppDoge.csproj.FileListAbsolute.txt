@@ -20,3 +20,5 @@ C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Principal.resour
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Procesos.resources
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.MantenimientoCliente.resources
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.MantenimientoProducto.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.ConsultarClientes.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.ConsultarProductos.resources
