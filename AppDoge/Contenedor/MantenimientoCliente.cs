@@ -58,7 +58,9 @@ namespace AppDoge
             }
         }
 
-        private void txtId_TextChanged(object sender, EventArgs e)
+        
+
+        private void txtId_TextChanged_1(object sender, EventArgs e)
         {
             errorProvider1.Clear();
         }
