@@ -140,5 +140,12 @@ namespace AppDoge
             conPro.MdiParent = this;
             conPro.Show();
         }
+
+        private void facturacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturacion fact = new Facturacion();
+            fact.MdiParent = this;
+            fact.Show();
+        }
     }
 }

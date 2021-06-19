@@ -29,6 +29,7 @@ namespace AppDoge
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnColocar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -44,18 +45,21 @@ namespace AppDoge
             this.label7 = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtAtiende = new UtileriaDLL.ControlTxt();
             this.txtCodUsuario = new UtileriaDLL.ControlTxt();
             this.txtCliente = new UtileriaDLL.ControlTxt();
-            this.controlTxt4 = new UtileriaDLL.ControlTxt();
-            this.controlTxt5 = new UtileriaDLL.ControlTxt();
-            this.controlTxt6 = new UtileriaDLL.ControlTxt();
-            this.controlTxt7 = new UtileriaDLL.ControlTxt();
+            this.txtCodProducto = new UtileriaDLL.ControlTxt();
+            this.txtDescripcion = new UtileriaDLL.ControlTxt();
+            this.txtPrecio = new UtileriaDLL.ControlTxt();
+            this.txtCantidad = new UtileriaDLL.ControlTxt();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblAtiende = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExitFormBase
@@ -210,15 +214,6 @@ namespace AppDoge
             this.dataGridView1.Size = new System.Drawing.Size(516, 230);
             this.dataGridView1.TabIndex = 15;
             // 
-            // txtAtiende
-            // 
-            this.txtAtiende.Location = new System.Drawing.Point(155, 39);
-            this.txtAtiende.Name = "txtAtiende";
-            this.txtAtiende.Size = new System.Drawing.Size(100, 20);
-            this.txtAtiende.SoloNumeros = false;
-            this.txtAtiende.TabIndex = 16;
-            this.txtAtiende.Validar = false;
-            // 
             // txtCodUsuario
             // 
             this.txtCodUsuario.Location = new System.Drawing.Point(155, 66);
@@ -226,7 +221,7 @@ namespace AppDoge
             this.txtCodUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtCodUsuario.SoloNumeros = false;
             this.txtCodUsuario.TabIndex = 17;
-            this.txtCodUsuario.Validar = false;
+            this.txtCodUsuario.Validar = true;
             // 
             // txtCliente
             // 
@@ -235,43 +230,43 @@ namespace AppDoge
             this.txtCliente.Size = new System.Drawing.Size(204, 20);
             this.txtCliente.SoloNumeros = false;
             this.txtCliente.TabIndex = 18;
-            this.txtCliente.Validar = false;
+            this.txtCliente.Validar = true;
             // 
-            // controlTxt4
+            // txtCodProducto
             // 
-            this.controlTxt4.Location = new System.Drawing.Point(52, 158);
-            this.controlTxt4.Name = "controlTxt4";
-            this.controlTxt4.Size = new System.Drawing.Size(100, 20);
-            this.controlTxt4.SoloNumeros = false;
-            this.controlTxt4.TabIndex = 19;
-            this.controlTxt4.Validar = false;
+            this.txtCodProducto.Location = new System.Drawing.Point(52, 158);
+            this.txtCodProducto.Name = "txtCodProducto";
+            this.txtCodProducto.Size = new System.Drawing.Size(100, 20);
+            this.txtCodProducto.SoloNumeros = false;
+            this.txtCodProducto.TabIndex = 19;
+            this.txtCodProducto.Validar = true;
             // 
-            // controlTxt5
+            // txtDescripcion
             // 
-            this.controlTxt5.Location = new System.Drawing.Point(171, 158);
-            this.controlTxt5.Name = "controlTxt5";
-            this.controlTxt5.Size = new System.Drawing.Size(159, 20);
-            this.controlTxt5.SoloNumeros = false;
-            this.controlTxt5.TabIndex = 20;
-            this.controlTxt5.Validar = false;
+            this.txtDescripcion.Location = new System.Drawing.Point(171, 158);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(159, 20);
+            this.txtDescripcion.SoloNumeros = false;
+            this.txtDescripcion.TabIndex = 20;
+            this.txtDescripcion.Validar = true;
             // 
-            // controlTxt6
+            // txtPrecio
             // 
-            this.controlTxt6.Location = new System.Drawing.Point(346, 158);
-            this.controlTxt6.Name = "controlTxt6";
-            this.controlTxt6.Size = new System.Drawing.Size(100, 20);
-            this.controlTxt6.SoloNumeros = false;
-            this.controlTxt6.TabIndex = 21;
-            this.controlTxt6.Validar = false;
+            this.txtPrecio.Location = new System.Drawing.Point(346, 158);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.SoloNumeros = false;
+            this.txtPrecio.TabIndex = 21;
+            this.txtPrecio.Validar = true;
             // 
-            // controlTxt7
+            // txtCantidad
             // 
-            this.controlTxt7.Location = new System.Drawing.Point(465, 158);
-            this.controlTxt7.Name = "controlTxt7";
-            this.controlTxt7.Size = new System.Drawing.Size(100, 20);
-            this.controlTxt7.SoloNumeros = false;
-            this.controlTxt7.TabIndex = 22;
-            this.controlTxt7.Validar = false;
+            this.txtCantidad.Location = new System.Drawing.Point(465, 158);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.SoloNumeros = false;
+            this.txtCantidad.TabIndex = 22;
+            this.txtCantidad.Validar = true;
             // 
             // pictureBox1
             // 
@@ -305,21 +300,46 @@ namespace AppDoge
             this.label10.Text = "Cantidad";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(276, 65);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // lblAtiende
+            // 
+            this.lblAtiende.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAtiende.Font = new System.Drawing.Font("Maiandra GD", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtiende.Location = new System.Drawing.Point(155, 37);
+            this.lblAtiende.Name = "lblAtiende";
+            this.lblAtiende.Size = new System.Drawing.Size(147, 23);
+            this.lblAtiende.TabIndex = 28;
+            this.lblAtiende.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 483);
+            this.Controls.Add(this.lblAtiende);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.controlTxt7);
-            this.Controls.Add(this.controlTxt6);
-            this.Controls.Add(this.controlTxt5);
-            this.Controls.Add(this.controlTxt4);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtCodProducto);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtCodUsuario);
-            this.Controls.Add(this.txtAtiende);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -337,6 +357,7 @@ namespace AppDoge
             this.Controls.Add(this.dataGridView1);
             this.Name = "Facturacion";
             this.Text = "Facturacion";
+            this.Load += new System.EventHandler(this.Facturacion_Load);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.btnExitFormBase, 0);
             this.Controls.SetChildIndex(this.btnColocar, 0);
@@ -353,18 +374,20 @@ namespace AppDoge
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.labelTotal, 0);
-            this.Controls.SetChildIndex(this.txtAtiende, 0);
             this.Controls.SetChildIndex(this.txtCodUsuario, 0);
             this.Controls.SetChildIndex(this.txtCliente, 0);
-            this.Controls.SetChildIndex(this.controlTxt4, 0);
-            this.Controls.SetChildIndex(this.controlTxt5, 0);
-            this.Controls.SetChildIndex(this.controlTxt6, 0);
-            this.Controls.SetChildIndex(this.controlTxt7, 0);
+            this.Controls.SetChildIndex(this.txtCodProducto, 0);
+            this.Controls.SetChildIndex(this.txtDescripcion, 0);
+            this.Controls.SetChildIndex(this.txtPrecio, 0);
+            this.Controls.SetChildIndex(this.txtCantidad, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.Controls.SetChildIndex(this.lblAtiende, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,15 +410,17 @@ namespace AppDoge
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private UtileriaDLL.ControlTxt txtAtiende;
         private UtileriaDLL.ControlTxt txtCodUsuario;
         private UtileriaDLL.ControlTxt txtCliente;
-        private UtileriaDLL.ControlTxt controlTxt4;
-        private UtileriaDLL.ControlTxt controlTxt5;
-        private UtileriaDLL.ControlTxt controlTxt6;
-        private UtileriaDLL.ControlTxt controlTxt7;
+        private UtileriaDLL.ControlTxt txtCodProducto;
+        private UtileriaDLL.ControlTxt txtDescripcion;
+        private UtileriaDLL.ControlTxt txtPrecio;
+        private UtileriaDLL.ControlTxt txtCantidad;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lblAtiende;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

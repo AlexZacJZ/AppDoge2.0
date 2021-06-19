@@ -22,3 +22,4 @@ C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.MantenimientoCli
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.MantenimientoProducto.resources
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.ConsultarClientes.resources
 C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.ConsultarProductos.resources
+C:\Users\DELL-PC\source\repos\AppDoge\AppDoge\obj\Debug\AppDoge.Facturacion.resources
