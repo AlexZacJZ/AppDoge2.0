@@ -48,6 +48,7 @@ namespace AppDoge
         }
 
         public static int contfilas = 0;
+        public static double total = 0;
         private void btnColocar_Click(object sender, EventArgs e)
         {
             if (MiLibreria.ValidarFormulario(this,errorProvider1)==false)
@@ -112,6 +113,28 @@ namespace AppDoge
                         contfilas++;
                     }
                 }
+                total = 0;
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    //Acumulador que cada vez que pase por la fila incrementara con el valor obtenido de SubTotal
+                    total += Convert.ToDouble(fila.Cells[5].Value);
+                }
+                labelTotal.Text = "Q "+total.ToString();
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (contfilas > 0)
+            {
+                /*Convertira del DataG1 la fila seleccionada-Celda 5 y al borrarla se le restara lo que tenga total*/
+                total = total - (Convert.ToDouble(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value));
+                labelTotal.Text= "Q " + total.ToString();
+                //Eliminara la fila seleccionado en el momento por el usuario 
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                //Para no dañar la integridad de los ingresos al momento de eliminar una fila se disminuye
+                contfilas--;
             }
         }
     }
