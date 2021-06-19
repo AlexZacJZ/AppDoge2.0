@@ -120,6 +120,9 @@ namespace AppDoge
                     total += Convert.ToDouble(fila.Cells[5].Value);
                 }
                 labelTotal.Text = "Q "+total.ToString();
+                txtCodProducto.Clear();
+                txtCantidad.Clear();
+                txtCodProducto.Focus();
 
             }
         }
@@ -137,5 +140,54 @@ namespace AppDoge
                 contfilas--;
             }
         }
-    }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ConsultarClientes conCli = new ConsultarClientes();
+            conCli.ShowDialog();//A DIFERENCIA DE SHOW, GENERA UNA VENTANA QUE NO SE CIERRA HASTA SELECCIONAR
+
+            if (conCli.DialogResult == DialogResult.OK)
+            {
+                txtCodUsuario.Text = conCli.dataGridView1.Rows[conCli.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                txtCliente.Text= conCli.dataGridView1.Rows[conCli.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString()+ " "+conCli.dataGridView1.Rows[conCli.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString(); ;
+                txtNit.Text= conCli.dataGridView1.Rows[conCli.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                txtCodProducto.Focus();
+            }
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            ConsultarProductos conPro = new ConsultarProductos();
+            conPro.ShowDialog();
+
+            if (conPro.DialogResult == DialogResult.OK)
+            {
+                txtCodProducto.Text = conPro.dataGridView1.Rows[conPro.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();   
+                txtCantidad.Focus();
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            /*El boton consta de limpiar todos los campos, pero haremos un override por que necesitamos que esta
+             funcionalidad tambien se aplique al momento de click facturar se limpien todas las pantallas, para esto
+            haremos uso del polimorfismo
+            */
+            Nuevo();
+        }
+
+        public override void Nuevo()
+        {
+            txtCodUsuario.Clear();
+            txtCliente.Clear();
+            txtNit.Clear();
+            txtCodProducto.Clear();
+            txtCantidad.Clear();
+            labelTotal.Text = "Q 0";
+            dataGridView1.Rows.Clear();
+            contfilas = 0;
+            total = 0;
+            txtCodUsuario.Focus();
+        }
+    } 
 }
