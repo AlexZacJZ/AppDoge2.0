@@ -56,13 +56,21 @@ namespace AppDoge
                 int num_fila = 0;
                 if (contfilas == 0)
                 {
-                    dataGridView1.Rows.Add(txtCodProducto.Text,txtDescripcion.Text,txtPrecio.Text,txtCantidad.Text);
+                    //ACA SE HIZO EL INICIO DEL CAMBIO
+                    dataGridView1.Rows.Add(txtCodProducto.Text);
                     /*Procedemos a crear una variable double la cual obtendra el valor del DV1 de las celdas 2 y 3
                      * que corresponden a cantidad y precio, tener en cuenta que contfilas es un comodin para saber
                      * en que fila estoy ubicado
                      */
+                    dataGridView1.Rows[contfilas].Cells[3].Value = txtCantidad.Text.Trim();
+                    string cmd = string.Format("Select * From Producto where id_producto= '{0}'", txtCodProducto.Text.Trim());
+                    DataSet ds = MiLibreria.Ejecutar(cmd);
+                    dataGridView1.Rows[contfilas].Cells[1].Value = ds.Tables[0].Rows[0]["Nom_producto"].ToString().Trim();
+                    dataGridView1.Rows[contfilas].Cells[2].Value = ds.Tables[0].Rows[0]["Precio_producto"].ToString().Trim();
                     double iva = Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[3].Value)*0.12;
                     dataGridView1.Rows[contfilas].Cells[4].Value = iva;
+                    double subT = Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[4].Value) + Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[3].Value);
+                    dataGridView1.Rows[contfilas].Cells[5].Value = subT;
                     contfilas++;
                 }
                 else
@@ -83,14 +91,24 @@ namespace AppDoge
                         //ACTUALIZA LA CANTIDAD DE LA FILA DONDE HAY COINCIDENCIA
                         dataGridView1.Rows[num_fila].Cells[3].Value=(Convert.ToDouble(txtCantidad.Text)+Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[3].Value)).ToString();
                         //ACTUALIZA IMPORTE TOTAL
-                        double iva= Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[3].Value) * 0.12;
+                        double iva= Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[3].Value) * 0.12;
                         dataGridView1.Rows[num_fila].Cells[4].Value = iva;
+                        double subT = Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[4].Value) + (Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[3].Value));
+                        dataGridView1.Rows[num_fila].Cells[5].Value = subT;
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(txtCodProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text);
+
+                        dataGridView1.Rows.Add(txtCodProducto.Text, txtCantidad.Text);
+                        string cmd = string.Format("Select * From Producto where id_producto= '{0}'", txtCodProducto.Text.Trim());
+                        DataSet ds = MiLibreria.Ejecutar(cmd);
+                        dataGridView1.Rows[contfilas].Cells[1].Value = ds.Tables[0].Rows[0]["Nom_producto"].ToString().Trim();
+                        dataGridView1.Rows[contfilas].Cells[2].Value = ds.Tables[0].Rows[0]["Precio_producto"].ToString().Trim();
+                        dataGridView1.Rows[contfilas].Cells[3].Value = txtCantidad.Text.Trim();
                         double iva = Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[3].Value) * 0.12;
                         dataGridView1.Rows[contfilas].Cells[4].Value = iva;
+                        double subT = Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[4].Value) + Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[2].Value) * Convert.ToDouble(dataGridView1.Rows[contfilas].Cells[3].Value);
+                        dataGridView1.Rows[contfilas].Cells[5].Value = subT;
                         contfilas++;
                     }
                 }

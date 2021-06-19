@@ -30,7 +30,7 @@ namespace AppDoge
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnColocar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -51,11 +51,10 @@ namespace AppDoge
             this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coliva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodUsuario = new UtileriaDLL.ControlTxt();
             this.txtCliente = new UtileriaDLL.ControlTxt();
             this.txtCodProducto = new UtileriaDLL.ControlTxt();
-            this.txtDescripcion = new UtileriaDLL.ControlTxt();
-            this.txtPrecio = new UtileriaDLL.ControlTxt();
             this.txtCantidad = new UtileriaDLL.ControlTxt();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@ namespace AppDoge
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.txtNit = new UtileriaDLL.ControlTxt();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -72,12 +72,12 @@ namespace AppDoge
             // 
             // btnExitFormBase
             // 
-            this.btnExitFormBase.Location = new System.Drawing.Point(633, 396);
+            this.btnExitFormBase.Location = new System.Drawing.Point(735, 389);
             this.btnExitFormBase.Size = new System.Drawing.Size(105, 23);
             // 
             // btnColocar
             // 
-            this.btnColocar.Location = new System.Drawing.Point(633, 222);
+            this.btnColocar.Location = new System.Drawing.Point(735, 215);
             this.btnColocar.Name = "btnColocar";
             this.btnColocar.Size = new System.Drawing.Size(105, 23);
             this.btnColocar.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace AppDoge
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(633, 251);
+            this.btnEliminar.Location = new System.Drawing.Point(735, 244);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 23);
             this.btnEliminar.TabIndex = 2;
@@ -96,7 +96,7 @@ namespace AppDoge
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(633, 280);
+            this.btnClientes.Location = new System.Drawing.Point(735, 273);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(105, 23);
             this.btnClientes.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace AppDoge
             // 
             // btnProductos
             // 
-            this.btnProductos.Location = new System.Drawing.Point(633, 309);
+            this.btnProductos.Location = new System.Drawing.Point(735, 302);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(105, 23);
             this.btnProductos.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace AppDoge
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(633, 338);
+            this.btnNuevo.Location = new System.Drawing.Point(735, 331);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(105, 23);
             this.btnNuevo.TabIndex = 5;
@@ -123,7 +123,7 @@ namespace AppDoge
             // 
             // btnFacturar
             // 
-            this.btnFacturar.Location = new System.Drawing.Point(633, 367);
+            this.btnFacturar.Location = new System.Drawing.Point(735, 360);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(105, 23);
             this.btnFacturar.TabIndex = 6;
@@ -200,7 +200,7 @@ namespace AppDoge
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(408, 473);
+            this.label7.Location = new System.Drawing.Point(523, 474);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 19);
             this.label7.TabIndex = 13;
@@ -210,9 +210,9 @@ namespace AppDoge
             // 
             this.labelTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelTotal.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(473, 461);
+            this.labelTotal.Location = new System.Drawing.Point(575, 473);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(103, 31);
+            this.labelTotal.Size = new System.Drawing.Size(103, 19);
             this.labelTotal.TabIndex = 14;
             // 
             // dataGridView1
@@ -228,15 +228,16 @@ namespace AppDoge
             this.ColDescrip,
             this.ColPrecio,
             this.ColCantidad,
-            this.Coliva});
+            this.Coliva,
+            this.SubTotal});
             this.dataGridView1.Location = new System.Drawing.Point(58, 240);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(516, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(614, 230);
             this.dataGridView1.TabIndex = 15;
             // 
             // ColCodigo
@@ -274,6 +275,12 @@ namespace AppDoge
             this.Coliva.ReadOnly = true;
             this.Coliva.Width = 95;
             // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "SubT";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            // 
             // txtCodUsuario
             // 
             this.txtCodUsuario.Location = new System.Drawing.Point(155, 66);
@@ -301,24 +308,6 @@ namespace AppDoge
             this.txtCodProducto.TabIndex = 19;
             this.txtCodProducto.Validar = true;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(179, 178);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(159, 20);
-            this.txtDescripcion.SoloNumeros = false;
-            this.txtDescripcion.TabIndex = 20;
-            this.txtDescripcion.Validar = true;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(354, 178);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.SoloNumeros = false;
-            this.txtPrecio.TabIndex = 21;
-            this.txtPrecio.Validar = true;
-            // 
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(473, 178);
@@ -343,7 +332,7 @@ namespace AppDoge
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(470, 215);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 27);
+            this.label9.Size = new System.Drawing.Size(106, 27);
             this.label9.TabIndex = 25;
             this.label9.Text = "IVA";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -403,11 +392,24 @@ namespace AppDoge
             this.txtNit.TabIndex = 30;
             this.txtNit.Validar = true;
             // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Black;
+            this.label11.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(572, 215);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 27);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "SubTotal";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 514);
+            this.ClientSize = new System.Drawing.Size(871, 503);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtNit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblAtiende);
@@ -416,8 +418,6 @@ namespace AppDoge
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCodProducto);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtCodUsuario);
@@ -437,6 +437,7 @@ namespace AppDoge
             this.Controls.Add(this.btnColocar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Facturacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturacion";
             this.Load += new System.EventHandler(this.Facturacion_Load);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
@@ -458,8 +459,6 @@ namespace AppDoge
             this.Controls.SetChildIndex(this.txtCodUsuario, 0);
             this.Controls.SetChildIndex(this.txtCliente, 0);
             this.Controls.SetChildIndex(this.txtCodProducto, 0);
-            this.Controls.SetChildIndex(this.txtDescripcion, 0);
-            this.Controls.SetChildIndex(this.txtPrecio, 0);
             this.Controls.SetChildIndex(this.txtCantidad, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.label9, 0);
@@ -468,6 +467,7 @@ namespace AppDoge
             this.Controls.SetChildIndex(this.lblAtiende, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.txtNit, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -496,8 +496,6 @@ namespace AppDoge
         private UtileriaDLL.ControlTxt txtCodUsuario;
         private UtileriaDLL.ControlTxt txtCliente;
         private UtileriaDLL.ControlTxt txtCodProducto;
-        private UtileriaDLL.ControlTxt txtDescripcion;
-        private UtileriaDLL.ControlTxt txtPrecio;
         private UtileriaDLL.ControlTxt txtCantidad;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
@@ -512,5 +510,7 @@ namespace AppDoge
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coliva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.Label label11;
     }
 }
