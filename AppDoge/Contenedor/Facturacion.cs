@@ -189,5 +189,44 @@ namespace AppDoge
             total = 0;
             txtCodUsuario.Focus();
         }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            /*Verificar si el dataG1 tiene elementos
+             */
+
+            if (contfilas != 0)
+            {
+                try
+                {
+                    //Se mandara a llamar al MetodoAlmacenado de ActualizaFactura el cual recibe como parametro el codigo del cliente, esto
+                    //para mostrar la factura actual en la que nos encontramos 
+                    string cmd = string.Format("Exec ActualizaFacturas '{0}'", txtCodUsuario.Text.Trim());
+                    DataSet ds = MiLibreria.Ejecutar(cmd);
+                    string NumFact = ds.Tables[0].Rows[0]["NumFact"].ToString().Trim();
+
+                    //Rellenaremos el DG1 de la tabla que colocamos en el informe con el metodoAlmacenado ActualizaDetalles
+                    foreach(DataGridViewRow Fila in dataGridView1.Rows)
+                    {
+                        cmd = string.Format("Exec ActualizaDetalles '{0}','{1}','{2}','{3}'", NumFact, Fila.Cells[0].Value.ToString(), Fila.Cells[2].Value.ToString(), Fila.Cells[3].Value.ToString());
+                        ds = MiLibreria.Ejecutar(cmd);
+                    }
+                    //Tener en cuenta que para usar este metodo debe referirse a la factura en la que se desea revisar
+                    cmd = "Exec DatosFactura " + NumFact;
+                    ds = MiLibreria.Ejecutar(cmd);
+
+                    //Ventana Reporte
+                    Reporte rp = new Reporte();
+                    rp.reportViewer1.LocalReport.DataSources[0].Value = ds.Tables[0];
+                    rp.ShowDialog();
+
+                    Nuevo();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ocurrio un error: " + error);
+                }
+            }
+        }
     } 
 }
